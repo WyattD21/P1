@@ -1,10 +1,17 @@
-# P1 — Modern C++ Starter
+# P1 C++ Starter
 
-The previously empty repository is now a small, production-shaped C++20 starter with a library/executable split, public headers, a zero-dependency test, CMake, CTest, and GitHub Actions CI.
+A small C++20 project set up with separate source, header, and test folders. The greeting function is kept in a library so it can be tested separately from `main.cpp`.
 
-    cmake -S . -B build
-    cmake --build build
-    ctest --test-dir build --output-on-failure
-    ./build/p1 Wyatt
+## Build and test
 
-Use this structure as a starting point for future C++ projects rather than putting all logic in `main.cpp`.
+```sh
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build --output-on-failure
+```
+
+Pass a name as the first argument when running the program:
+
+```sh
+./build/p1 Wyatt
+```
